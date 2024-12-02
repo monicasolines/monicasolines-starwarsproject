@@ -49,7 +49,7 @@ export const Planets = () => {
                                         <span
                                             id="buton corazon"
                                             className={isFavorite(item.name) ? "btn btn-warning btn-outline-warning" : "btn btn-outline-warning"}
-                                            onClick={() => actions.addFavorite({ name: item.name, type: 'Character' })}
+                                            onClick={() => actions.addFavorite({ name: item.name, type: 'Planet' })}
                                         >
                                             {isFavorite(item.name) ?
                                                 <i className="fa-solid fa-heart" style={{ color: '#000000' }}></i>

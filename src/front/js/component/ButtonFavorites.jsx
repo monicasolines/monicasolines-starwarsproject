@@ -35,7 +35,7 @@ export const ButtonFavorites = () => {
                             key={index}
                             className="dropdown-item d-flex justify-content-between align-items-center"
                         >
-                            <span>{item.name} ({item.type})</span>
+                            <span className="p-1">{item.name} ({item.type})</span>
                             <button
                                 className="btn btn-light"
                                 onClick={() => actions.removeFavorite(item)}
