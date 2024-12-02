@@ -20,7 +20,7 @@ export const Login = () => {
     }
 
     return (
-        <div className="container bg-light mt-5 rounded col-4 m-auto" >
+        <div className="container bg-light mt-5 rounded col-4 m-auto p-2" >
             {store.alerta?.visible && (
                         <div
                             className={`alert alert-${store.alerta.background}`}

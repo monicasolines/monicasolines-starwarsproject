@@ -36,6 +36,7 @@ export const Characters = () => {
                                     alt={item.name}
                                     src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`}
                                     onError={handleImgError}
+                                    className="card-img-custom"
                                 />
                                 <div className="card-body">
                                     <h5 className="card-title">

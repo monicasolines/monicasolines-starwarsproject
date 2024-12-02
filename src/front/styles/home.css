@@ -5,3 +5,43 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+
+
+/* body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+#app {
+    min-height: 100vh;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.card-img-custom {
+    width: 100%; /* La imagen ocupará todo el ancho de su contenedor */
+    height: 300px; /* Ajusta la altura al tamaño deseado */
+    object-fit: cover; /* Escala la imagen manteniendo su proporción sin salir del contenedor */
+    border-radius: 8px; /* Opcional: redondea las esquinas */
+    margin-bottom: 0%;
+}
+
+footer {
+    background-color: #5C636A; /* Color del footer */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.dropdown-menu {
+    position: absolute !important;
+    top: 100%; /* Asegura que el menú esté justo debajo del botón */
+    left: 0; /* Alinea el menú a la izquierda del contenedor del dropdown */
+    z-index: 1050; /* Asegura que esté encima de otros elementos */
+    transform: none !important; /* Elimina transformaciones de Bootstrap */
+}

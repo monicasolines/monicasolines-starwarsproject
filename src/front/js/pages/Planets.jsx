@@ -32,6 +32,7 @@ export const Planets = () => {
                                     alt={item.name}
                                     src={`https://starwars-visualguide.com/assets/img/planets/${index + 1}.jpg`}
                                     onError={handleImgError}
+                                    className="card-img-custom"
                                 />
                                 <div className="card-body">
                                     <h5 className="card-title">

@@ -10,7 +10,7 @@ export const Dashboard = () => {
   }
 
   return (
-    <div className="text-center mt-5 mb-5">
+    <div className="text-center mt-5 mb-5" style={{backgroundColor: "#5C636A"}}>
       <h1>Welcome To Your Star Wars Page!</h1>
       {store.alert?.visible && (
         <div

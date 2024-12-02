@@ -23,42 +23,40 @@ import { StarshipDetails } from "./pages/StarshipsDetails.jsx";
 import { Dashboard } from "./pages/Dashboard.jsx";
 
 
-//Create your first component
 const Layout = () => {
-    //The basename is used when your project is published in a subdirectory and not in the root of the domain
-    // You can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
     const basename = process.env.BASENAME || "";
-    if (!process.env.BACKEND_URL || process.env.BACKEND_URL == "") return <BackendURL />;
+    if (!process.env.BACKEND_URL || process.env.BACKEND_URL === "") return <BackendURL />;
 
     return (
-        <div>
+        <div className="d-flex flex-column min-vh-100" style={{backgroundColor: "#DDE0E5"}}> {/* Contenedor principal */}
             <BrowserRouter basename={basename}>
                 <ScrollToTop>
                     <Navbar />
-                    <Routes>
-                        <Route element={<Home />} path="/" />
-                        <Route element={<Demo />} path="/demo" />
-                        <Route element={<Single />} path="/single/:theid" />
-                        <Route element={<AddContact />} path="/add-contact" />
-                        <Route element={<Contacts />} path="/contacts" />
-                        <Route element={<Login />} path="/login" />
-                        <Route element={<EditContacts />} path="/edit-contact" />
-                        <Route element={<Characters />} path="/characters" />
-                        <Route element={<Planets />} path="/planets" />
-                        <Route element={<Starships />} path="/starships" />
-                        <Route element={<CharactersDetails />} path="/characters/:id" />
-                        <Route element={<PlanetDetails />} path="/planets/:id" />
-                        <Route element={<StarshipDetails />} path="/starships/:id" />
-                        <Route element={<Dashboard/>} path="/dashboard" />
-                        <Route element={<h1>Not found!</h1>} path="*" />
-
-
-                    </Routes>
-                    <Footer />
+                    <div className="flex-grow-1"> {/* Contenido principal */}
+                        <Routes>
+                            <Route element={<Home />} path="/" />
+                            <Route element={<Demo />} path="/demo" />
+                            <Route element={<Single />} path="/single/:theid" />
+                            <Route element={<AddContact />} path="/add-contact" />
+                            <Route element={<Contacts />} path="/contacts" />
+                            <Route element={<Login />} path="/login" />
+                            <Route element={<EditContacts />} path="/edit-contact" />
+                            <Route element={<Characters />} path="/characters" />
+                            <Route element={<Planets />} path="/planets" />
+                            <Route element={<Starships />} path="/starships" />
+                            <Route element={<CharactersDetails />} path="/characters/:id" />
+                            <Route element={<PlanetDetails />} path="/planets/:id" />
+                            <Route element={<StarshipDetails />} path="/starships/:id" />
+                            <Route element={<Dashboard />} path="/dashboard" />
+                            <Route element={<h1>Not found!</h1>} path="*" />
+                        </Routes>
+                    </div>
                 </ScrollToTop>
             </BrowserRouter>
+            <Footer /> {/* Footer permanece al final */}
         </div>
     );
 };
+
 
 export default injectContext(Layout);

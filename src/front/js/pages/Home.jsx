@@ -14,7 +14,7 @@ export const Home = () => {
 			<p>
 				<img src={starwars} style={{ width: "900px"}} />
 			</p>
-				<Link to ="/dashboard"> <button> Go to Dashboard </button></Link>
+				<Link to ="/dashboard"> <button className="btn btn-dark"> Go to Dashboard </button></Link>
 		</div>
 	);
 };
